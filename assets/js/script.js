@@ -36,13 +36,35 @@ var newQuestion = questions[questionIndex];
 //update title dynamically with current question
 var qTitleEl = document.getElementById("question-title");
 qTitleEl.textContent = newQuestion.title;
-}
+
 
 newQuestion.choices.forEach(function(choice, i) {
+    // creates a new button for each choice
     var option = document.createElement("button");
-    
+    option.setAttribute("class", "choice");
+    option.setAttribute("value", choice);
+    option.textContent = i + 1 + "." + choice;
+
+    // click event for each choice
+    option.onclick = clickQuestion;
+    choicesEl.appendChild(option);
+});
 }
-);
+function clickQuestion() {
+    // check if question is right or wrong
+    if (this.value !== questions[questionIndex].answer) {
+        // wrong answer = -15 seconds
+        time -=15;
+        if (time<0){
+            time = 0;
+        }
+// put new time on page
+timerEl.textContent = time;
+
+
+
+    }
+}
 
 function Ticker(){
     time--;
