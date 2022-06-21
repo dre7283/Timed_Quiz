@@ -8,10 +8,11 @@
   </head>
 
   <body>
+    <div class="highscores"><a href="hscore.html">History of High Scores</a></div>
     <div class="timer">Time: <span id="time">0</span></div>
 
     <main>
-      <section id="intro" class="start-quiz">
+      <section id="begin" class="start">
         <h2>Coding Quiz Challenge</h2>
         <p>
           Try to answer the following code-related questions within the time
@@ -28,12 +29,15 @@
 
       <section id="finished" class="hide"> 
         <h2>Quiz Finished!</h2>
-        <p>
-          Your F
+        <p> Final Score = <span id="final-score"></span>.</p>
+        <p> Enter your initials: <input type="text" id="initials" max="3"/>
+          <button id="submit">Submit</button>
         </p>
       </section>
+      <section id="feedback" class="feedback hide"></section>
     </main>
 
+      
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
