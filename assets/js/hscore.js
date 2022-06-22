@@ -17,5 +17,11 @@ function printHighscores() {
 }); 
 }
 
+function clearScores() {
+    localStorage.removeItem("highscores");
+    location.reload();
+}
+
+document.getElementById("clear").onclick=clearScores;
 
 printHighscores();

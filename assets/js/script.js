@@ -123,7 +123,7 @@ function saveHighScore(){
 if(initials !== ""){
     // get saved scores from localStorage, if there are none then set to empty array
     var highscores=
-    JSON.parse(window.localStorage.getItem("highscores")) || [];
+    JSON.parse(localStorage.getItem("highscores")) || [];
 
 // format new score object
 var newScore = {
@@ -133,9 +133,9 @@ var newScore = {
 
 // save to localStorage
 highscores.push(newScore);
-window.localStorage.setItem("highscores", JSON.stringify (highscores));
+localStorage.setItem("highscores", JSON.stringify (highscores));
 
-window.location.href = "highscores.html";
+location.href = "hscore.html";
 }
 }
 
