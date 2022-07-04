@@ -1,4 +1,11 @@
-.hide {
+body{
+    font-family: helvetica;
+    font-size: 115%;
+}
+
+
+
+.hidden {
     display: none;
 }
 
@@ -6,4 +13,20 @@
 .timer{
     position: absolute;
     right: 10px;
+}
+
+#begin{
+    text-align: center;
+    margin: 150px;
+}
+
+p{
+    display: block;
+    
+}
+
+button{
+ margin: 30px; 
+ background-color: #66b8c5; 
+ 
 }

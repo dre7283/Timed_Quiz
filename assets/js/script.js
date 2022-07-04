@@ -18,7 +18,7 @@ var initialsEl = document.getElementById("initials");
 function startQuiz() {
 //hide the start screen
 var introEl = document.getElementById("begin");
-introEl.setAttribute("class", "hide");
+introEl.setAttribute("class", "hidden");
 
 //reveal questions 
 questionsEl.removeAttribute("class");
@@ -100,7 +100,7 @@ var finalScoreEl = document.getElementById("final-score");
 finalScoreEl.textContent = time;
 
 // hide questions
-questionsEl.setAttribute("class", "hide");
+questionsEl.setAttribute("class", "hidden");
 }
 
 

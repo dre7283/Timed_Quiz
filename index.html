@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timed Quiz</title>
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
   </head>
 
   <body>
@@ -22,12 +23,12 @@
         <button id="start-quiz">Start Quiz</button>
       </section>
 
-      <section id="questions" class="hide">
+      <section id="questions" class="hidden">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
       </section>
 
-      <section id="finished" class="hide"> 
+      <section id="finished" class="hidden"> 
         <h2>Quiz Finished!</h2>
         <p> Final Score = <span id="final-score"></span>.</p>
         <p> Enter your initials: <input type="text" id="initials" max="3"/>
