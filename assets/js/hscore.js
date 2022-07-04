@@ -10,7 +10,7 @@ function printHighscores() {
     highscores.forEach(function(score) {
     
     var list = document.createElement("li");
-    list.textContent =score.initials + " - " + score.score;
+    list.textContent =score.initials + score.score;
 
     var olistEl = document.getElementById("highscores");
     olistEl.appendChild(list);

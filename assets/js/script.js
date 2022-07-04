@@ -10,7 +10,7 @@ var startBtn = document.getElementById("start-quiz");
 var feedbackEl = document.getElementById("feedback");
 var submitBtn = document.getElementById("submit");
 var initialsEl = document.getElementById("initials");
-
+var feedbackHideEl=document.getElementById("feedback-hide");
 
 
 
@@ -54,15 +54,18 @@ newQuestion.choices.forEach(function(choice, i) {
     choicesEl.appendChild(option);
 });
 }
+
 function clickQuestion() {
     // check if answer is right or wrong
     if (this.value !== questions[questionIndex].answer) {
         // wrong answer = -15 seconds
-        time -=15;
+        time -= 15;
+    
         if (time < 0){
-            time = 0;
+            time = 0;        
         }
-// put new time on page
+
+// show new time on page
 timerEl.textContent = time;
 
 feedbackEl.textContent = "wrong Answer";
@@ -72,11 +75,11 @@ feedbackEl.textContent = "Correct Answer";
 
 // flash Wrong or Correct Answer on page for 1/2 second
 feedbackEl.setAttribute("class", "feedback");
-setTimeout(function(){
-   feedbackEl.setAttribute("class", "feedback hide"); 
-}, 1000);
+  setTimeout(function() {
+    feedbackEl.setAttribute("class", "feedback hide");
+  }, 1000);
 
-// Next Question
+// display next question
 questionIndex++;
 
 // Check if we reached the end of the quiz
@@ -108,11 +111,12 @@ questionsEl.setAttribute("class", "hidden");
 function Ticker(){
     time--;
     timerEl.textContent = time;
-}
+
 
 // check if time expired
 if (time <= 0) {
     endQuiz();
+}
 }
 
 // Save HighScore

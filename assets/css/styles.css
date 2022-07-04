@@ -13,20 +13,41 @@ body{
 .timer{
     position: absolute;
     right: 10px;
+    top: 10px;
 }
 
-#begin{
+main{
+    margin: 100px auto 0 auto;
+  
+}
+
+.start{
     text-align: center;
-    margin: 150px;
 }
 
 p{
     display: block;
-    
+    margin: 20px;
+    padding: 0px 370px 0px 370px;
 }
 
 button{
- margin: 30px; 
- background-color: #66b8c5; 
- 
+ margin: 10px; 
+ background-color: #33a0b2; 
+ font-size: 20px;
+ border-radius: 10px;
+ border-color: #fff;
+ border: 0;
+ padding: 4px 12px;
+ color: #efefef;
 }
+
+.choices button{
+ display: block;
+}
+
+
+#finished{
+    text-align: center;
+}
+
