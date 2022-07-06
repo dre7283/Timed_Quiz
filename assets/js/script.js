@@ -68,16 +68,16 @@ function clickQuestion() {
 // show new time on page
 timerEl.textContent = time;
 
-feedbackEl.textContent = "wrong Answer";
+feedbackEl.textContent = "Wrong Answer";
     } else {
 feedbackEl.textContent = "Correct Answer";
 }
 
-// flash Wrong or Correct Answer on page for 1/2 second
+// flash Wrong or Correct Answer on page for 1 second
 feedbackEl.setAttribute("class", "feedback");
   setTimeout(function() {
-    feedbackEl.setAttribute("class", "feedback hide");
-  }, 1000);
+    feedbackEl.setAttribute("class", "feedback hidden");
+  }, 500);
 
 // display next question
 questionIndex++;
@@ -96,7 +96,7 @@ function endQuiz() {
 
     // quiz finished show last page
 var finishedEl = document.getElementById("finished");
-finishedEl.removeAttribute("class");
+finishedEl.removeAttribute("class", "hidden");
 
 // show the final score
 var finalScoreEl = document.getElementById("final-score");

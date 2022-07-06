@@ -1,6 +1,6 @@
 // Get scores from local storage
 function printHighscores() {
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
     
     // Sort highscores in descending order
     highscores.sort(function(a,b) {
@@ -9,8 +9,9 @@ function printHighscores() {
     
     highscores.forEach(function(score) {
     
+    
     var list = document.createElement("li");
-    list.textContent =score.initials + score.score;
+    list.textContent =score.initials + " - " + score.score;
 
     var olistEl = document.getElementById("highscores");
     olistEl.appendChild(list);

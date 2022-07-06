@@ -3,10 +3,31 @@ body{
     font-size: 115%;
 }
 
+button{
+    display: inline-block;
+    margin: 10px; 
+    background-color: #33a0b2; 
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: #fff;
+    border: 0;
+    padding: 4px 12px;
+    color: #efefef;
+}
+
+div{
+    display: block;
+    text-align:center;
+}
+.hscores{
+    max-width: fit-content;
+    margin: auto;
+}
 
 
 .hidden {
     display: none;
+    text-align: center;
 }
 
 
@@ -16,34 +37,34 @@ body{
     top: 10px;
 }
 
-main{
-    margin: 100px auto 0 auto;
-  
-}
+
 
 .start{
     text-align: center;
 }
-
-p{
-    display: block;
-    margin: 20px;
-    padding: 0px 370px 0px 370px;
+main{
+    margin: 100px auto 0 auto;
+    max-width: 600px;
 }
 
-button{
- margin: 10px; 
- background-color: #33a0b2; 
- font-size: 20px;
- border-radius: 10px;
- border-color: #fff;
- border: 0;
- padding: 4px 12px;
- color: #efefef;
-}
 
 .choices button{
- display: block;
+    display: block;
+}
+
+.highscores{
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+.feedback {
+    font-style:italic;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: #f44336;
+    font-weight: bold;
+    border-top: 2px solid #ccc;
 }
 
 
@@ -51,3 +72,6 @@ button{
     text-align: center;
 }
 
+
+
+/* Responsive styles */

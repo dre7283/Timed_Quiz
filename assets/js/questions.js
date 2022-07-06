@@ -10,7 +10,7 @@ var questions = [
         answer:"all of the above"
     },
     {//question 3
-        title:"A very userfule tool used during development and debugging for printing content to the debugger is:",
+        title:"A very usefull tool used during development and debugging for printing content to the debugger is:",
         choices:["JavaScript", "terminal / bash", "for loops", "console.log"],
         answer:"console.log"
     },
